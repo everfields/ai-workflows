@@ -53,7 +53,7 @@ def call_llm_for_cleaning_instructions(df: pd.DataFrame) -> CleaningInstructions
     )
 
     response = openai.ChatCompletion.create(
-        model="gpt-4o",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": "You are a helpful data cleaning assistant."},
             {"role": "user", "content": prompt}
